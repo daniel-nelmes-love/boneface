@@ -28,7 +28,7 @@ div.content p,
 div.content a {
 	text-align: center;
 	margin: 0;
-	font-size: 1.2em;
+	font-size: 0.8em;
 	text-transform: uppercase;
 }
 
@@ -47,4 +47,8 @@ div.content a:visited {
     div.content {
 		width: 30vw;
 	}
+	div.content p,
+div.content a {
+	font-size: 1.2em;
+}
 }
