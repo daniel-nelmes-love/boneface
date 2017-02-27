@@ -48,7 +48,7 @@ div.content a:visited {
 		width: 30vw;
 	}
 	div.content p,
-div.content a {
-	font-size: 1.2em;
-}
+	div.content a {
+		font-size: 1.2em;
+	}
 }
