@@ -28,12 +28,12 @@ div.content p,
 div.content a {
 	text-align: center;
 	margin: 0;
-	font-size: 0.8em;
 	text-transform: uppercase;
 }
 
 div.content p {
 	color: #5a842b;
+	font-size: 0.8em;
 }
 div.content a,
 div.content a:visited {
@@ -43,12 +43,17 @@ div.content a:visited {
 	font-size: 0.8em;
 }
 
+@media screen and (min-width: 480px) {
+	div.content p {
+		font-size: 1.5em;
+	}
+}
+
 @media screen and (min-width: 800px) {
     div.content {
 		width: 30vw;
 	}
-	div.content p,
-	div.content a {
+	div.content p {
 		font-size: 1.2em;
 	}
 }
