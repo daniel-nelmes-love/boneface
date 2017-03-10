@@ -1,4 +1,4 @@
-$(function() {
+$(window).load(function() {
 	var animationSpeed = 500
 	var formHeight = resetContainers()
 	$('.contactUs').css('margin-top', -2*formHeight)
