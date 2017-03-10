@@ -19,6 +19,7 @@ div.textContainer {
 	display: inline-block;
 	opacity: 0;
 }
+
 div.textContainer.centered {
 	margin-left: 50%;
 	-webkit-transform: translateX(-50%);
