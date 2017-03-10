@@ -1,16 +1,46 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Boneface Brewing Co.</title>
+
+	<link rel="shortcut icon" type="image/x-icon"  href="favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/construction.css">
 	<link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
-	<link rel="shortcut icon" type="image/x-icon"  href="favicon.png">
+
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous">
+	</script>
+
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="contactUs/gen_validatorv31.js">
+	</script>
+
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="contactUs/script.js">
+	</script>
+
+	<script language="JavaScript">
+		function jsfunction() {
+			console.log(1)
+		}
+	</script>
 
 </head>
+
 <body>
+
 	<img src="images/boneface.png">
 	<div class="textContainer">
 		<p>Website under construction.</p>
@@ -18,6 +48,23 @@
 		<p><a href="https://www.instagram.com/boneface_brewing_co/">Instagram: boneface_brewing_co</a></p>
 		<p><a href="https://www.facebook.com/Bonefacebrewing/">Facebook: Bonefacebrewing</a></p>
 		<p><a href="https://twitter.com/bonefacebrewer">Twitter: bonefacebrewer</a></p>
+		<p><a href="Javascript:openContactForm()">Or you can contact us here</a></p>
+		<form method="POST" name="contactform" action="contactUs/handler.php"> 
+			<p>
+				<label for='name'>Your name:</label><br>
+				<input type="text" name="name" placeholder="John Smith">
+			</p>
+			<p>
+				<label for='email'>Your email:</label> <br>
+				<input type="text" name="email" placeholder="example@gmail.com"> <br>
+			</p>
+			<p>
+				<label for='message'>Message:</label> <br>
+				<textarea name="message" placeholder="Type your message here ..."></textarea>
+			</p>
+			<input type="submit" value="Submit"><br>
+		</form>
 	</div>
+
 </body>
 </html>
