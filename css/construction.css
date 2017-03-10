@@ -17,7 +17,9 @@ div.textContainer {
 	overflow: hidden;
 	margin-top: 10vh;
 	display: inline-block;
+	opacity: 0;
 }
+
 div.textContainer.centered {
 	margin-left: 50%;
 	-webkit-transform: translateX(-50%);

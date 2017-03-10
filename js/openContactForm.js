@@ -1,4 +1,4 @@
-$(function() {
+$(window).load(function() {
 	var animationSpeed = 500
 	var formHeight = resetContainers()
 	$('.contactUs').css('margin-top', -2*formHeight)
@@ -31,6 +31,7 @@ $(function() {
 })
 
 function resetContainers() {
+	$('div.textContainer').css('opacity', 0)
 	var containers = [
 		$('.contactUs'),
 		$('.textContainer'),
@@ -52,6 +53,9 @@ function resetContainers() {
 	for (var i = 0; i < containers.length; i++) {
 		containers[i].css('height', height)
 	};
+	setTimeout(function() {
+		$('div.textContainer').animate({'opacity': 1}, 150)
+	}, 100)
 	return height
 }
 
