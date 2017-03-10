@@ -1,50 +1,69 @@
 body {
-	background-color: #000;
-	height: 100vh;
-	margin: 0;
 	position: relative;
+	background-color: #000;
+	margin: 10vh 0 0 0;
+	padding: 0;
 	font-family: 'Sigmar One', cursive;
 }
 
-div.content {
-	width: 80vw;
-	position: absolute;
-	top: 50vh;
-	left: 50vw;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+img {
+	max-height: 40vh;
+	margin: auto;
+	display: block;
 }
 
-div.content img {
-	width: 80%;
-	margin-left: 10%;
-	margin-bottom: 5vh;
+div.textContainer {
+	position: relative;
+	overflow: hidden;
+	margin-top: 10vh;
+	display: inline-block;
+}
+div.textContainer.centered {
+	margin-left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
-div.content p,
-div.content a {
+div.textContainer > div {
+	background-color: #000;
+}
+
+.constructionEmail .textContainer {
+	display: block;
+}
+
+p, a {
 	text-align: center;
 	margin: 0;
-	font-size: 1.2em;
 	text-transform: uppercase;
 }
 
-div.content p {
+p {
 	color: #5a842b;
 }
-div.content a,
-div.content a:visited {
+
+a, a:visited {
 	color: rgba(255, 255, 255, 0.6);
 	cursor: pointer;
 	text-decoration: none;
 	font-size: 0.8em;
 }
 
-@media screen and (min-width: 800px) {
-    div.content {
-		width: 30vw;
-	}
+@media screen and (max-width: 1399px) {
+	p {font-size: 2.3em;}
+}
+
+@media screen and (max-width: 1024px) {
+	p {font-size: 1.7em;}
+}
+
+@media screen and (max-width: 799px) {
+	p {font-size: 3.5vmin;}
+}
+
+@media screen and (min-width: 1400px) {
+	p {font-size: 1.5em;}
 }

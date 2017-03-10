@@ -1,23 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Boneface Brewing Co.</title>
+
+	<link rel="shortcut icon" type="image/x-icon"  href="favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/construction.css">
+	<link rel="stylesheet" type="text/css" href="css/contactForm.css">
 	<link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
 
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous">
+	</script>
+
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="contactUs/gen_validatorv31.js">
+	</script>
+
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="contactUs/script.js">
+	</script>
+
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="js/openContactForm.js">
+	</script>
+
 </head>
+
 <body>
-	<div class="content">
-		<img src="images/boneface.png">
-		<div class="textContainer">
+
+	<img src="images/boneface.png">
+	<div class="textContainer">
+		<div class="underConstruction">
 			<p>Website under construction.</p>
 			<p>For now you can find us on:</p>
 			<p><a href="https://www.instagram.com/boneface_brewing_co/">Instagram: boneface_brewing_co</a></p>
 			<p><a href="https://www.facebook.com/Bonefacebrewing/">Facebook: Bonefacebrewing</a></p>
 			<p><a href="https://twitter.com/bonefacebrewer">Twitter: bonefacebrewer</a></p>
+			<p class="openContactForm">Or <u>click here</u> to contact us</p>
+		</div>
+		<div>
+			<form class="contactUs" method="POST" name="contactform" action="contactUs/handler.php">
+				<p>Contact form:</p>
+				<p>
+					<label for='name'>Your name:</label>
+					<input type="text" name="name" placeholder="John Smith">
+				</p>
+				<p>
+					<label for='email'>Your email:</label>
+					<input type="text" name="email" placeholder="example@gmail.com">
+				</p>
+				<p>
+					<label for='message'>Message:</label><br>
+					<textarea name="message" placeholder="Type your message here ..." rows="5"></textarea>
+				</p>
+				<div class="closeContactForm"><p>Back</p></div>
+				<input type="submit" value="Submit">
+				<div style="clear:both;"></div>
+			</form>
 		</div>
 	</div>
+
 </body>
 </html>

@@ -1,0 +1,80 @@
+.openContactForm {
+	cursor: pointer;
+}
+
+div.textContainer > div {
+	background-color: #000;
+}
+
+form {
+	background: #000;
+}
+
+form.contactUs.hidden {
+	position: absolute;
+	left: 0;
+}
+
+form.contactUs p {
+	text-align: left;
+}
+
+form.contactUs p label {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.8em;
+	width: 35%;
+	display: inline-block;
+}
+
+form.contactUs p input {
+	width: 60%;
+	display: inline-block;
+	font-size: 0.8em;
+}
+
+form.contactUs p textarea {
+	width: 96%;
+	font-size: 0.6em;
+	resize: none;
+}
+
+form.contactUs input[type="submit"],
+form.contactUs .closeContactForm {
+	background-color: transparent;
+	border: 2px solid #5a842b;
+	border-radius: 4px;
+	color: #5a842b;
+	width: 40%;
+	display: inline-block;
+	cursor: pointer;
+	float: left;
+	padding: 0;
+}
+
+form.contactUs .closeContactForm p {
+	margin: 0;
+	padding: 0;
+}
+
+form.contactUs input[type="submit"] {
+	margin-left: 16.5%;
+}
+
+form.contactUs input[type="submit"]:focus {
+	outline: none;
+}
+
+form.contactUs input[type="submit"],
+form.contactUs .closeContactForm p {
+	transition: all 0.25s ease;
+	font-size: 0.8em;
+	text-align: center;
+	font-family: 'Sigmar One', cursive;
+	text-transform: uppercase;
+}
+
+form.contactUs input[type="submit"]:not(.touch):hover,
+form.contactUs .closeContactForm:not(.touch):hover p {
+	background-color: #5a842b;
+	color: #000;
+}
