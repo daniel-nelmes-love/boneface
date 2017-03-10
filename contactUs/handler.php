@@ -29,7 +29,7 @@ if( empty($errors))
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
 	$headers .= "X-Mailer: PHP/" . PHP_VERSION;
-	mail($to,$email_subject,$email_body,$headers);
+	// mail($to,$email_subject,$email_body,$headers);
 
 	header('Location: ../emailSent.html');
 	// echo '<script type="text/javascript">jsfunction();</script>';
