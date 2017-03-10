@@ -9,6 +9,7 @@
 
 	<link rel="shortcut icon" type="image/x-icon"  href="favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/construction.css">
+	<link rel="stylesheet" type="text/css" href="css/contactForm.css">
 	<link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
 
 	<script
@@ -31,10 +32,10 @@
 		src="contactUs/script.js">
 	</script>
 
-	<script language="JavaScript">
-		function jsfunction() {
-			console.log(1)
-		}
+	<script
+		language="JavaScript"
+		type="text/javascript"
+		src="js/openContactForm.js">
 	</script>
 
 </head>
@@ -43,27 +44,34 @@
 
 	<img src="images/boneface.png">
 	<div class="textContainer">
-		<p>Website under construction.</p>
-		<p>For now you can find us on:</p>
-		<p><a href="https://www.instagram.com/boneface_brewing_co/">Instagram: boneface_brewing_co</a></p>
-		<p><a href="https://www.facebook.com/Bonefacebrewing/">Facebook: Bonefacebrewing</a></p>
-		<p><a href="https://twitter.com/bonefacebrewer">Twitter: bonefacebrewer</a></p>
-		<p><a href="Javascript:openContactForm()">Or you can contact us here</a></p>
-		<form method="POST" name="contactform" action="contactUs/handler.php"> 
-			<p>
-				<label for='name'>Your name:</label><br>
-				<input type="text" name="name" placeholder="John Smith">
-			</p>
-			<p>
-				<label for='email'>Your email:</label> <br>
-				<input type="text" name="email" placeholder="example@gmail.com"> <br>
-			</p>
-			<p>
-				<label for='message'>Message:</label> <br>
-				<textarea name="message" placeholder="Type your message here ..."></textarea>
-			</p>
-			<input type="submit" value="Submit"><br>
-		</form>
+		<div class="underConstruction">
+			<p>Website under construction.</p>
+			<p>For now you can find us on:</p>
+			<p><a href="https://www.instagram.com/boneface_brewing_co/">Instagram: boneface_brewing_co</a></p>
+			<p><a href="https://www.facebook.com/Bonefacebrewing/">Facebook: Bonefacebrewing</a></p>
+			<p><a href="https://twitter.com/bonefacebrewer">Twitter: bonefacebrewer</a></p>
+			<p class="openContactForm">Or <u>click here</u> to contact us</p>
+		</div>
+		<div>
+			<form class="contactUs" method="POST" name="contactform" action="contactUs/handler.php">
+				<p>Contact form:</p>
+				<p>
+					<label for='name'>Your name:</label>
+					<input type="text" name="name" placeholder="John Smith">
+				</p>
+				<p>
+					<label for='email'>Your email:</label>
+					<input type="text" name="email" placeholder="example@gmail.com">
+				</p>
+				<p>
+					<label for='message'>Message:</label><br>
+					<textarea name="message" placeholder="Type your message here ..." rows="5"></textarea>
+				</p>
+				<div class="closeContactForm"><p>Back</p></div>
+				<input type="submit" value="Submit">
+				<div style="clear:both;"></div>
+			</form>
+		</div>
 	</div>
 
 </body>
