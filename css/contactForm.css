@@ -2,17 +2,16 @@
 	cursor: pointer;
 }
 
-div.textContainer > div {
+div.formContent {
 	background-color: #000;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 form {
-	background: #000;
-}
-
-form.contactUs.hidden {
-	position: absolute;
-	left: 0;
+	width: 100%;
 }
 
 form.contactUs p {
