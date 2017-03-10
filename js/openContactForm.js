@@ -1,27 +1,23 @@
-$(function() {
+$(window).load(function() {
 	var animationSpeed = 500
-	var formHeight = resetContainers()
-	$('.contactUs').css('margin-top', -2*formHeight)
+
+	var formHeight = setContainerWidth($('.content'))
 
 	$(window).resize(function() {
-		console.log('reset')
-		formHeight = resetContainers()
+		formHeight = setContainerWidth($('.content'))
 	})
 
 	$('.openContactForm').on('click', function() {
-		$('.underConstruction').fadeOut(animationSpeed)
-		$('.contactUs').animate({
-			'margin-top': -formHeight
-		}, animationSpeed).promise().done(function() {
-			$('.contactUs').css('margin-top', 0)
-		})
+		$('.underConstruction').animate({'opacity':0}, animationSpeed)
+		$('.formContent').animate({
+			'top': 0
+		}, animationSpeed).addClass('formOpen')
 	})
 	$('.closeContactForm').on('click', function() {
-		$('.contactUs').css('margin-top', -formHeight)
-		$('.underConstruction').fadeIn(animationSpeed)
-		$('.contactUs').animate({
-			'margin-top': -2*formHeight
-		}, animationSpeed)
+		$('.underConstruction').animate({'opacity':1}, animationSpeed)
+		$('.formContent').animate({
+			'top': -formHeight
+		}, animationSpeed).removeClass('formOpen')
 	})
 
 	if (isTouchDevice) {
@@ -30,28 +26,33 @@ $(function() {
 	};
 })
 
-function resetContainers() {
-	var containers = [
-		$('.contactUs'),
-		$('.textContainer'),
-		$('.underConstruction')
-	];
-	for (var i = 0; i < containers.length; i++) {
-		containers[i].css({
-			'width': 'initial',
-			'height': 'initial'
-		})
-	};
-	$('.textContainer').removeClass('centered')
+function setContainerWidth(container) {
+	container.css({
+		'width': 'initial',
+		'height': 'initial',
+		'opacity': 0
+	})
 	var width = Math.ceil($('.textContainer')[0].getBoundingClientRect().width)
+	container.width(width)
+	var height = 0
+	var containers = [
+		$('.textContainer'),
+		$('.formContent')
+	]
 	for (var i = 0; i < containers.length; i++) {
-		containers[i].css('width', width)
+		var thisHeight = containers[i].height()
+		console.log(thisHeight)
+		if (height<thisHeight) {
+			height = thisHeight
+		};
 	};
-	$('.textContainer').addClass('centered')
-	var height = $('.contactUs').height()
-	for (var i = 0; i < containers.length; i++) {
-		containers[i].css('height', height)
-	};
+	container.height(height)
+	if (!$('.formContent').hasClass('formOpen')) {
+		$('.formContent').css('top', -height)
+	}
+	setTimeout(function() {
+		container.animate({'opacity':1}, 150)
+	}, 100)
 	return height
 }
 

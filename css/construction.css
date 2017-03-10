@@ -12,27 +12,22 @@ img {
 	display: block;
 }
 
+div.content {
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	margin-top: 10vh;
+	opacity: 0;
+}
+
 div.textContainer {
 	position: relative;
-	overflow: hidden;
-	margin-top: 10vh;
 	display: inline-block;
-}
-div.textContainer.centered {
-	margin-left: 50%;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
 }
 
 div.textContainer > div {
 	background-color: #000;
-}
-
-.constructionEmail .textContainer {
-	display: block;
 }
 
 p, a {
