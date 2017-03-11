@@ -30,6 +30,11 @@ div.textContainer > div {
 	background-color: #000;
 }
 
+.constructionEmail .textContainer {
+	margin-top: 10vh;
+	display: block;
+}
+
 p, a {
 	text-align: center;
 	margin: 0;
